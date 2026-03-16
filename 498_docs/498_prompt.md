@@ -22,11 +22,8 @@ So remember that I'll be working on both these projects "neural-noise" and "late
 
 ## Your Goal
 
-1. Help me strategize a step-by-step and holistic ***implementation roadmap***/plan for the DGAI "neural-noise" project till the final milestone.
-2. Brainstorm and write a detailed, well-structured, and ***holistic prompt*** for the Milestone 1 that I can give to a coding agent in Google Antigravity (look up Google's new agentic coding platform "Antigravity" online if you want to know more about it) for this project step-by-step.
-3. Finally, help me draft the contents for the powepoint slides that I will be using to make the video presentation for Milestone 1.
-
- **A CRITICAL NOTE**: This second document for the holistic prompt is supposed to be the preliminary scaffolding context to a completely isolated "agent" (NOT ME) that doesn't have any context of this conversation or any conversation I've had with you in the "Gemini" interface. So before writing this system prompt for the Antigravity coding agent, think first about what an "isolated" agent will think about this document you will be generating and then critique it.
+1. Help me implement the MicroMusicGPT baseline based on the rapid 5-step execution plan I have highlighted below.
+2. Finally, help me draft the contents for the powepoint slides that I will be using to make the video presentation for Milestone 1.
 
 ---
 
@@ -177,10 +174,10 @@ The implementation will follow a rapid 5-phase execution plan. The codebase will
 
 #### Phase 1: Dataset Triage ("Tiny Symphony")
 
-The target dataset is an excerpt from the MAESTRO v3.0.0 MIDI dataset. To ensure rapid training convergence while maintaining musical complexity, the dataset must be subsetted.
+The target dataset is an excerpt from the MAESTRO v3.0.0 MIDI dataset. To ensure rapid training convergence while maintaining musical complexity, the dataset must be subsetted. Hence, I have decided to keep only the midi files for Ludvig Van Beethoven's pieces (i.e where the "canonical_composer" filed is "l v beethoven" in the metadata csv file).
 
-* **Data Selection:** Extract approximately 60 MIDI files strictly from the MAESTRO `validation` split. Filtering by a single classical composer (e.g., Chopin or Bach) is preferred to enforce a consistent stylistic distribution.
-* **Scale:** This subsetting will yield roughly 1,000,000 musical event tokens (equivalent to the scale of the Tiny Shakespeare dataset, equating to about 6-9 hours of continuous piano).
+* **Data Selection:** Extract the MIDI files strictly associated with Beethoven's pieces from the MAESTRO datasett. Filtering by a single classical composer is preferred to enforce a consistent stylistic distribution.
+* **Scale:** This subsetting might yield roughly 1,000,000 musical event tokens (equivalent to the scale of the Tiny Shakespeare dataset, equating to about 6-9 hours of continuous piano).
 * **Directory:** Move the selected `.mid` files into a dedicated `data/raw_midi/` directory.
 
 #### Phase 2: The MIDI Tokenizer (Event-Based Encoding)
@@ -233,6 +230,4 @@ Construct an interactive web interface (`app.py`) to demonstrate the model's gen
 
 # Next Steps
 
-The Milestone 1 (midterm) is due for both the SML and DGAI projects in a couple of days. The DGAI project is due first tonight and then the SML project is due tomorrow midnight.
-
-So now that you have these instructions and context, I want you to think step-by-step about the next steps for the DGAI "neural-noise" project. First, we will create the overall implementation roadmap till the final milestone and then we will move on to drafting the actual comprehensive system prompt for the Milestone 1 for this project with my acknowledgement.
+The Milestone 1 (midterm) is due for the DGAI project tonight. So now that you have these instructions and context, I want you to think step-by-step about the next steps for the DGAI "neural-noise" project, specifically the Milestone 1. You will think and plan about this step-by-step for implementing Milestone 1 for this project first and then later proceed to writign the actual code with my acknowledgement.
