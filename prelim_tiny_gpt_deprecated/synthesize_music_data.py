@@ -3,7 +3,7 @@ import random
 # --- REPLACEMENT START ---
 # Context: You are interested in Music Transformers. 
 # We simulate a "Music Dataset" where characters = notes.
-# c, d, e, f, g, a, b (lower octave) | C, D, E, F, G, A, B (upper octave)
+# c, d, e, f, g, a, b (lower octave) | C, D, E, F, G, A, B (upper octave)..
 
 print("Synthesizing musical dataset...")
 docs = []
