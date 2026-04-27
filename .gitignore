@@ -19,10 +19,11 @@ m2_app/backend/ACE-Step-1.5/nn_prompts/
 m2_app/backend/ACE-Step-1.5/openrouter/
 m2_app/backend/ACE-Step-1.5/scripts/
 
-# Generated output
-m2_app/output/
+# Generated output — committed for Gallery / read-only demo
+# Add new local-only outputs to .gitignore manually if needed
 
 # Python
 __pycache__/
 *.pyc
 .DS_Store
+poster_env/
