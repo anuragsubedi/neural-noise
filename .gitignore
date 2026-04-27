@@ -1,5 +1,5 @@
 /maestro-v3.0.0
-/checkpoints
+/m1_app/checkpoints
 
 # ACE-Step model checkpoints (too large for Git)
 m2_app/backend/ACE-Step-1.5/checkpoints/

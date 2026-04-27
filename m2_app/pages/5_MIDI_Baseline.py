@@ -14,7 +14,8 @@ from pathlib import Path
 st.set_page_config(page_title="MIDI Baseline | neural-noise", page_icon="🎹", layout="wide")
 
 _APP_ROOT = Path(__file__).resolve().parents[1]
-_PROJECT_ROOT = _APP_ROOT.parent
+_PROJECT_ROOT = _APP_ROOT.parent          # neural-noise/
+_M1_ROOT = _PROJECT_ROOT / "m1_app"      # neural-noise/m1_app/
 css_path = _APP_ROOT / "static" / "style.css"
 if css_path.exists():
     with open(css_path) as f:
@@ -63,7 +64,7 @@ st.markdown("---")
 # ---------------------------------------------------------------------------
 st.markdown("## Generate MIDI")
 
-checkpoint_path = _PROJECT_ROOT / "checkpoints" / "micromusicgpt_v1_final.pth"
+checkpoint_path = _M1_ROOT / "checkpoints" / "micromusicgpt_v1_final.pth"
 has_model = checkpoint_path.exists()
 
 if not has_model:
@@ -75,7 +76,7 @@ if not has_model:
     st.markdown("### Pre-Generated Samples")
     st.markdown("Browse pre-generated MIDI samples from the M1 pipeline:")
 
-    generated_dir = _PROJECT_ROOT / "data" / "generated"
+    generated_dir = _M1_ROOT / "data" / "generated"
     if generated_dir.exists():
         midi_files = sorted(generated_dir.glob("*.mid*"), reverse=True)
         if midi_files:
@@ -96,7 +97,7 @@ else:
     # For now, we direct users to the original Gradio app.
     st.markdown(
         "For the full interactive M1 experience, run the original Gradio app:\n"
-        "```bash\ncd neural-noise && python3 app.py\n```"
+        "```bash\ncd neural-noise && python3 m1_app/app.py\n```"
     )
 
 st.markdown("---")
