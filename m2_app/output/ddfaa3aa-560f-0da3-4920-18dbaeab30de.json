@@ -1,0 +1,37 @@
+{
+  "params": {
+    "task_type": "text2music",
+    "caption": "Nepali Folk-Rock fusion in 3/4 time signature. Driven by a powerful, earthy Madal rhythm (Khyali pattern) and a heavy, melodic bassline. Blend organic acoustic elements with gritty electric guitar power chords. The vocals should be raw, gravelly, and powerful\u2014reminiscent of a mountain folk singer. Incorporate a soaring Bansuri (bamboo flute) that mirrors the guitar melody. The production should feel 'live' and stadium-ready, balancing traditional Himalayan soul with the energy of 90s blues-rock.",
+    "lyrics": "[Intro]\n(Deep, resonant Madal solo: Dhin-ta-nan-na, Dhin-ta-nan-na)\n(Distorted electric guitar fades in with a long, sustained chord)\n\n[Verse 1]\nNidhaar ko pasina, bagera gayo\nKholi ko bagar ma, baluwa bhayo\nJunuko ujyalo, heri-heri thaki sakyo\nYo mann ko bhari ta, jahile tyahi rahyo.\n\n[Chorus]\n(Drums and Bass enter heavy)\nHey... katai janchu bhanthe, tyahi purano bato\nSirma chha rittai, tara mann bhari mato\nSathi-bhai chhuttie, kuro tyo niraalo\nUjyalo khojda khojdai, bhayo jhan adhyaro!\n\n[Bridge]\n(High-energy guitar solo with folk-inflected scales)\nAashai-aash ma, baisai gayo...\nBholi bhanda bhandai, hami lai k bhayo?\n\n[Outro]\n(Madal rhythm intensifies, then slows down)\nHo... ho... ho...\n(Fading flute melody)",
+    "instrumental": false,
+    "bpm": 80,
+    "keyscale": "G Major",
+    "timesignature": "3",
+    "duration": 60.0,
+    "inference_steps": 8,
+    "shift": 3.0,
+    "seed": -1,
+    "thinking": true
+  },
+  "seed": 3518204899,
+  "generation_time": 203.05240201950073,
+  "cot_metadata": {
+    "bpm": 80,
+    "keyscale": "G Major",
+    "timesignature": "3",
+    "duration": 60
+  },
+  "time_costs": {
+    "lm_phase1_time": 0.0,
+    "lm_phase2_time": 54.04122972488403,
+    "lm_total_time": 54.04122972488403,
+    "dit_encoder_time_cost": 0.7763948440551758,
+    "dit_diffusion_time_cost": 57.713683128356934,
+    "dit_diffusion_per_step_time_cost": 7.214210391044617,
+    "dit_total_time_cost": 97.5907666683197,
+    "dit_offload_time_cost": 25.80880904197693,
+    "dit_vae_decode_time_cost": 39.10068869590759,
+    "pipeline_total_time": 151.63199639320374
+  },
+  "timestamp": "2026-04-27T01:07:02.604988"
+}

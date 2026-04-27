@@ -1,0 +1,37 @@
+{
+  "params": {
+    "task_type": "text2music",
+    "caption": "A cinematic fusion of Dub-Techno and IDM. The track features deep, resonant sub-bass pulses and crisp, syncopated percussion with a heavy emphasis on delay and reverb. Integrate ethereal, swelling synthesizer pads and intricate rhythmic arpeggios that build tension. Incorporate 'glitch' textures and subtle static crackle for a 'ghost in the machine' aesthetic. The vocals should be processed with a slight robotic vocoder effect, transitioning between intimate whispers and melodic clarity. Focus on wide stereo imaging, binaural soundscapes, and a 124 BPM tempo-sync\u2019d rhythm that feels both mechanical and organic",
+    "lyrics": "",
+    "instrumental": true,
+    "bpm": 125,
+    "keyscale": "D minor",
+    "timesignature": "4",
+    "duration": 60.0,
+    "inference_steps": 8,
+    "shift": 3.0,
+    "seed": -1,
+    "thinking": true
+  },
+  "seed": 340530080,
+  "generation_time": 202.08366107940674,
+  "cot_metadata": {
+    "bpm": 125,
+    "keyscale": "D minor",
+    "timesignature": "4",
+    "duration": 60
+  },
+  "time_costs": {
+    "lm_phase1_time": 0.0,
+    "lm_phase2_time": 58.58469891548157,
+    "lm_total_time": 58.58469891548157,
+    "dit_encoder_time_cost": 0.7485239505767822,
+    "dit_diffusion_time_cost": 60.4630811214447,
+    "dit_diffusion_per_step_time_cost": 7.557885140180588,
+    "dit_total_time_cost": 94.87610507011414,
+    "dit_offload_time_cost": 20.12308120727539,
+    "dit_vae_decode_time_cost": 33.66449999809265,
+    "pipeline_total_time": 153.4608039855957
+  },
+  "timestamp": "2026-04-27T00:17:35.758589"
+}

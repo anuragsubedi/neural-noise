@@ -1,0 +1,37 @@
+{
+  "params": {
+    "task_type": "text2music",
+    "caption": "60-second Deep Melodic House track in a 6/8 time signature. Features a driving, triplet-based 'rolling' rhythm with a heavy kick on the downbeat and crisp, organic percussion. Incorporate lush, side-chained atmospheric pads and a delicate, melancholic synth pluck melody. The vocals are minimal, intimate, and processed with wide stereo delays and pitch-shifted echoes. The aesthetic is a blend of Ben B\u00f6hmer's melodic depth and Fred again..'s atmospheric texture. Fast structural progression: immediate beat entry, 25-second melodic build, and a brief 5-second ambient fade-out.",
+    "lyrics": "",
+    "instrumental": true,
+    "bpm": 125,
+    "keyscale": "Ab minor",
+    "timesignature": "6",
+    "duration": 60.0,
+    "inference_steps": 12,
+    "shift": 3.0,
+    "seed": -1,
+    "thinking": true
+  },
+  "seed": 4007949999,
+  "generation_time": 251.6251471042633,
+  "cot_metadata": {
+    "bpm": 125,
+    "keyscale": "Ab minor",
+    "timesignature": "6",
+    "duration": 60
+  },
+  "time_costs": {
+    "lm_phase1_time": 0.0,
+    "lm_phase2_time": 60.524176836013794,
+    "lm_total_time": 60.524176836013794,
+    "dit_encoder_time_cost": 0.8164489269256592,
+    "dit_diffusion_time_cost": 82.53360915184021,
+    "dit_diffusion_per_step_time_cost": 10.316701143980026,
+    "dit_total_time_cost": 120.09994196891785,
+    "dit_offload_time_cost": 28.180878162384033,
+    "dit_vae_decode_time_cost": 36.74988389015198,
+    "pipeline_total_time": 180.62411880493164
+  },
+  "timestamp": "2026-04-27T01:49:11.822978"
+}

@@ -1,0 +1,37 @@
+{
+  "params": {
+    "task_type": "text2music",
+    "caption": "ambient generative techno with slow rhythmic pulses and sweeping pads",
+    "lyrics": "",
+    "instrumental": true,
+    "bpm": 120,
+    "keyscale": "E minor",
+    "timesignature": "4",
+    "duration": 20.0,
+    "inference_steps": 6,
+    "shift": 3.0,
+    "seed": -1,
+    "thinking": true
+  },
+  "seed": 2560446586,
+  "generation_time": 159.45312929153442,
+  "cot_metadata": {
+    "bpm": 120,
+    "keyscale": "E minor",
+    "timesignature": "4",
+    "duration": 20
+  },
+  "time_costs": {
+    "lm_phase1_time": 0.0,
+    "lm_phase2_time": 18.269225120544434,
+    "lm_total_time": 18.269225120544434,
+    "dit_encoder_time_cost": 0.7633581161499023,
+    "dit_diffusion_time_cost": 54.770910024642944,
+    "dit_diffusion_per_step_time_cost": 9.128485004107157,
+    "dit_total_time_cost": 79.1338860988617,
+    "dit_offload_time_cost": 25.300304651260376,
+    "dit_vae_decode_time_cost": 23.599617958068848,
+    "pipeline_total_time": 97.40311121940613
+  },
+  "timestamp": "2026-04-26T22:23:06.689002"
+}

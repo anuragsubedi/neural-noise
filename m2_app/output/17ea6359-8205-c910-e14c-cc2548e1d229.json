@@ -1,0 +1,37 @@
+{
+  "params": {
+    "task_type": "text2music",
+    "caption": "This is a classic Nepali evergreen that blends rhythmic folk sensibilities with a melodic pop-orchestral arrangement. Characterized by its driving $6/8$ (often interpreted as a swinging $3/4$) Khyali rhythm played on the Madal, the song features a call-and-response structure between the lead vocalists and a bright, melodic woodwind section. The instrumentation typically leans on acoustic guitars, harmonium, and violins, creating a lush but traditional soundscape that captures the playful, romantic essence of the \"Mohani\" (enchantment) spell described in the lyrics. The vocal delivery is smooth and expressive, mirroring the hilly, undulating terrain of rural Nepal through its rhythmic phrasing and folk-inspired cadences",
+    "lyrics": "[Intro]\nHaaaaaaa ahhhh\nHeeeyyy  heyyy\nHaaaaaa ahhhaa-aahhaa\n\n\nAhhhh\n[Chorus 1]\nMohani Laagla Hai Gaaunle Ko Boli Le\nMohani Laagla Hai Gaaunle Ko Boli Le\nDanda Kanda Chahara Ko Geet Le\nKhyal Thata Nagara Aljhela Bagara\nBirsane Laisamnjhana Ko Geet Le\nBirsane Laisamnjhana Ko Geet Le\n\n\n[Verse 1]\nKun Sanjog Hola Kun Daiba Hola Bhet Bhayo Bagara\nKuna Gaaun Hola Kun Thaaun Hola Basne Kun Sahara\nKun Sanjog Hola Kun Daiba Hola Bhet Bhayo Bagara\nJhalmala Hola Jun Thaun Hola Kathmandu Sahara\n\n\n[Outro]\nMohani Laagla Hai Gaaunle Ko Boli Le\nMohani Laagla Hai\nMohani Laagla Hai\nMohani Laagla Hai",
+    "instrumental": false,
+    "bpm": 85,
+    "keyscale": "G Major",
+    "timesignature": "6",
+    "duration": 50.0,
+    "inference_steps": 8,
+    "shift": 3.0,
+    "seed": -1,
+    "thinking": true
+  },
+  "seed": 2424037171,
+  "generation_time": 221.99029207229614,
+  "cot_metadata": {
+    "bpm": 85,
+    "keyscale": "G Major",
+    "timesignature": "6",
+    "duration": 50
+  },
+  "time_costs": {
+    "lm_phase1_time": 0.0,
+    "lm_phase2_time": 67.95734906196594,
+    "lm_total_time": 67.95734906196594,
+    "dit_encoder_time_cost": 0.8957850933074951,
+    "dit_diffusion_time_cost": 64.05433297157288,
+    "dit_diffusion_per_step_time_cost": 8.00679162144661,
+    "dit_total_time_cost": 99.2569808959961,
+    "dit_offload_time_cost": 22.39447855949402,
+    "dit_vae_decode_time_cost": 34.30686283111572,
+    "pipeline_total_time": 167.21432995796204
+  },
+  "timestamp": "2026-04-27T01:27:24.327916"
+}

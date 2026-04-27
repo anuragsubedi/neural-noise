@@ -1,0 +1,37 @@
+{
+  "params": {
+    "task_type": "text2music",
+    "caption": "Authentic Delta Blues style, 85 BPM. Features a gritty, resonant acoustic resonator guitar with slide techniques and a steady, rhythmic floor stomp. Raw, soulful male vocals with a slight gravelly texture. High-fidelity recording that captures the natural room reverb and string buzz. Simple, emotive structure with a call-and-response between the vocal and the guitar.",
+    "lyrics": "[Verse]\nI got a heavy heart, and a long, long way to go\nYeah, a heavy heart, and a long, long way to go\nThe sun is sinkin' down, but the clock is movin' slow.\n\n[Solo]\n(Wailing harmonica or slide guitar riff)\n\n[Outro]\nYeah, I\u2019m driftin\u2019 on...\n(Final resonant low E string pluck)",
+    "instrumental": false,
+    "bpm": 85,
+    "keyscale": "Eb minor",
+    "timesignature": "4",
+    "duration": 35.0,
+    "inference_steps": 8,
+    "shift": 3.0,
+    "seed": -1,
+    "thinking": true
+  },
+  "seed": 3596111341,
+  "generation_time": 195.23337483406067,
+  "cot_metadata": {
+    "bpm": 85,
+    "keyscale": "Eb minor",
+    "timesignature": "4",
+    "duration": 35
+  },
+  "time_costs": {
+    "lm_phase1_time": 0.0,
+    "lm_phase2_time": 37.20309925079346,
+    "lm_total_time": 37.20309925079346,
+    "dit_encoder_time_cost": 0.9558191299438477,
+    "dit_diffusion_time_cost": 70.25866174697876,
+    "dit_diffusion_per_step_time_cost": 8.782332718372345,
+    "dit_total_time_cost": 99.72371792793274,
+    "dit_offload_time_cost": 22.282327890396118,
+    "dit_vae_decode_time_cost": 28.509237051010132,
+    "pipeline_total_time": 136.9268171787262
+  },
+  "timestamp": "2026-04-27T00:33:41.641928"
+}

@@ -1,0 +1,37 @@
+{
+  "params": {
+    "task_type": "text2music",
+    "caption": "60-second Deep Melodic House track in a 6/8 time signature. Features a driving, triplet-based 'rolling' rhythm with a heavy kick on the downbeat and crisp, organic percussion. Incorporate lush, side-chained atmospheric pads and a delicate, melancholic synth pluck melody. The vocals are minimal, intimate, and processed with wide stereo delays and pitch-shifted echoes. The aesthetic is a blend of Ben B\u00f6hmer's melodic depth and Fred again..'s atmospheric texture. Fast structural progression: immediate beat entry, 25-second melodic build, and a brief 5-second ambient fade-out.",
+    "lyrics": "(Immediate rolling 6/8 percussion: Kick-kick-snare, Kick-kick-snare)\n(Sub-bass follows the 6/8 pulse)\n\n(Vocal - Breathy, heavily delayed)\nStay...\nJust for the rhythm.\n(Echo: For the rhythm...)\nIn the silence.\n\n(Lush, side-chained chords swell on every first beat of the 6/8 bar)\n(High-pitched synth \"plucks\" dancing in triplets)\n\n(Drums cut, leaving one long reverb wash)\n(Faint whisper: \"Now.\")",
+    "instrumental": false,
+    "bpm": 125,
+    "keyscale": "Ab minor",
+    "timesignature": "6",
+    "duration": 60.0,
+    "inference_steps": 8,
+    "shift": 3.0,
+    "seed": -1,
+    "thinking": true
+  },
+  "seed": 3648765133,
+  "generation_time": 251.14294910430908,
+  "cot_metadata": {
+    "bpm": 125,
+    "keyscale": "Ab minor",
+    "timesignature": "6",
+    "duration": 60
+  },
+  "time_costs": {
+    "lm_phase1_time": 0.0,
+    "lm_phase2_time": 63.18190908432007,
+    "lm_total_time": 63.18190908432007,
+    "dit_encoder_time_cost": 0.9711508750915527,
+    "dit_diffusion_time_cost": 85.22715592384338,
+    "dit_diffusion_per_step_time_cost": 10.653394490480423,
+    "dit_total_time_cost": 120.65623092651367,
+    "dit_offload_time_cost": 24.979565143585205,
+    "dit_vae_decode_time_cost": 34.457924127578735,
+    "pipeline_total_time": 183.83814001083374
+  },
+  "timestamp": "2026-04-27T01:55:21.637705"
+}
