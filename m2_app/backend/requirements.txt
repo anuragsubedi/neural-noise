@@ -1,0 +1,97 @@
+# ============================================================================
+# neural-noise Backend — Unified Requirements
+# ============================================================================
+# Includes all ACE-Step 1.5 + backend service + Streamlit dashboard deps.
+#
+# Install:
+#   python3 -m venv acestep_env
+#   source acestep_env/bin/activate
+#   pip install -r requirements.txt
+#
+# On Windows: acestep_env\Scripts\activate
+# ============================================================================
+
+# ---------------------------------------------------------------------------
+# PyTorch (platform-specific)
+# ---------------------------------------------------------------------------
+# CUDA index for Windows / Linux
+--extra-index-url https://download.pytorch.org/whl/cu128
+
+# Windows (CUDA 12.8)
+torch==2.7.1+cu128; sys_platform == 'win32'
+torchvision==0.22.1+cu128; sys_platform == 'win32'
+torchaudio==2.7.1+cu128; sys_platform == 'win32'
+
+# macOS Apple Silicon (MPS)
+torch>=2.9.1; sys_platform == 'darwin' and platform_machine == 'arm64'
+torchaudio>=2.9.1; sys_platform == 'darwin' and platform_machine == 'arm64'
+torchvision; sys_platform == 'darwin' and platform_machine == 'arm64'
+
+# Linux x86_64 (CUDA 12.8)
+torch==2.10.0+cu128; sys_platform == 'linux' and platform_machine == 'x86_64'
+torchvision==0.25.0+cu128; sys_platform == 'linux' and platform_machine == 'x86_64'
+torchaudio==2.10.0+cu128; sys_platform == 'linux' and platform_machine == 'x86_64'
+
+# ---------------------------------------------------------------------------
+# ACE-Step Core Dependencies
+# ---------------------------------------------------------------------------
+safetensors>=0.7.0
+transformers>=4.51.0,<4.58.0
+diffusers>=0.37.0
+matplotlib>=3.7.5
+scipy>=1.10.1
+soundfile>=0.13.1
+loguru>=0.7.3
+einops>=0.8.1
+accelerate>=1.12.0
+numba>=0.63.1
+vector-quantize-pytorch>=1.27.15
+torchcodec>=0.9.1; platform_machine != 'aarch64'
+torchao; sys_platform != 'darwin'
+toml
+xxhash
+diskcache
+
+# MLX (Apple Silicon only — native acceleration for DiT + VAE)
+mlx>=0.25.2; sys_platform == 'darwin' and platform_machine == 'arm64'
+mlx-lm>=0.20.0; sys_platform == 'darwin' and platform_machine == 'arm64'
+
+# nano-vllm dependencies (Windows / Linux only)
+triton-windows>=3.0.0,<3.4; sys_platform == 'win32'
+triton>=3.0.0; sys_platform == 'linux'
+flash-attn; sys_platform == 'linux' and platform_machine == 'x86_64'
+
+# ---------------------------------------------------------------------------
+# Backend Services (FastAPI microservices)
+# ---------------------------------------------------------------------------
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.0.0
+httpx>=0.27.0
+
+# ---------------------------------------------------------------------------
+# Streamlit Dashboard
+# ---------------------------------------------------------------------------
+streamlit>=1.30.0
+plotly>=5.18.0
+
+# ---------------------------------------------------------------------------
+# Metrics page (CLAP scoring + acoustic descriptors)
+# ---------------------------------------------------------------------------
+# Note: no NEW pip packages are required for the Metrics page. We reuse the
+# already-pinned `transformers` (for `ClapModel` / `ClapProcessor`) and `scipy`
+# (for FFT-based spectral descriptors). However, the first visit to the
+# Metrics page downloads the LAION-CLAP checkpoint to the HuggingFace cache:
+#
+#   Model: laion/clap-htsat-unfused  (~614 MB)
+#   Cache: ~/.cache/huggingface/hub/
+#
+# To pre-download it ahead of time, run (with the venv activated):
+#   python -c "from transformers import ClapModel, ClapProcessor; \
+#              ClapModel.from_pretrained('laion/clap-htsat-unfused'); \
+#              ClapProcessor.from_pretrained('laion/clap-htsat-unfused')"
+
+# ---------------------------------------------------------------------------
+# nano-vllm (local package — install separately after pip install)
+# ---------------------------------------------------------------------------
+# pip install -e ACE-Step-1.5/acestep/third_parts/nano-vllm
