@@ -1,0 +1,134 @@
+{
+  "presets": {
+    "Ambient Electronica": {
+      "caption": "ambient electronic music with ethereal synth pads, subtle glitch textures, and deep reverberant spaces",
+      "bpm": 85,
+      "keyscale": "D minor",
+      "timesignature": "4",
+      "instrumental": true,
+      "mood": "Calm"
+    },
+    "Generative Techno": {
+      "caption": "ambient generative techno with slow rhythmic pulses, sweeping pads, and hypnotic basslines",
+      "bpm": 120,
+      "keyscale": "A minor",
+      "timesignature": "4",
+      "instrumental": true,
+      "mood": "Dark"
+    },
+    "Jazz Trio": {
+      "caption": "jazz trio with piano, upright bass, and brush drums in a warm intimate club setting",
+      "bpm": 130,
+      "keyscale": "Bb Major",
+      "timesignature": "4",
+      "instrumental": true,
+      "mood": "Warm"
+    },
+    "Cinematic Orchestral": {
+      "caption": "epic cinematic orchestral score with sweeping strings, dramatic brass, and thunderous timpani",
+      "bpm": 90,
+      "keyscale": "C minor",
+      "timesignature": "4",
+      "instrumental": true,
+      "mood": "Epic"
+    },
+    "Lo-fi Hip Hop": {
+      "caption": "lo-fi hip hop beat with dusty vinyl crackle, mellow jazz piano chords, and laid-back drums",
+      "bpm": 85,
+      "keyscale": "F Major",
+      "timesignature": "4",
+      "instrumental": true,
+      "mood": "Relaxed"
+    },
+    "Classical Piano": {
+      "caption": "solo classical piano piece with expressive dynamics, romantic phrasing, and rich harmonies",
+      "bpm": 100,
+      "keyscale": "C Major",
+      "timesignature": "4",
+      "instrumental": true,
+      "mood": "Melancholic"
+    },
+    "Indie Rock": {
+      "caption": "indie rock with jangly electric guitars, driving drums, warm bass, and energetic feel",
+      "bpm": 140,
+      "keyscale": "G Major",
+      "timesignature": "4",
+      "instrumental": true,
+      "mood": "Energetic"
+    },
+    "Synthwave": {
+      "caption": "synthwave with retro analog synthesizers, pulsing arpeggios, gated reverb drums, and neon-lit atmosphere",
+      "bpm": 110,
+      "keyscale": "E minor",
+      "timesignature": "4",
+      "instrumental": true,
+      "mood": "Nostalgic"
+    },
+    "Acoustic Folk": {
+      "caption": "acoustic folk with fingerpicked guitar, gentle harmonica, warm vocal harmonies, and pastoral atmosphere",
+      "bpm": 105,
+      "keyscale": "G Major",
+      "timesignature": "3",
+      "instrumental": true,
+      "mood": "Warm"
+    },
+    "Dark Ambient": {
+      "caption": "dark ambient drone with deep sub-bass rumbles, eerie metallic textures, and vast cavernous reverb",
+      "bpm": 60,
+      "keyscale": "F# minor",
+      "timesignature": "4",
+      "instrumental": true,
+      "mood": "Dark"
+    },
+    "Future Bass": {
+      "caption": "future bass with lush supersaw chords, vocal chops, heavy sidechained kick, and euphoric drop",
+      "bpm": 150,
+      "keyscale": "Ab Major",
+      "timesignature": "4",
+      "instrumental": true,
+      "mood": "Uplifting"
+    },
+    "Bossa Nova": {
+      "caption": "bossa nova with nylon guitar, soft brushed drums, warm bass, and smooth jazzy harmonies",
+      "bpm": 120,
+      "keyscale": "D Major",
+      "timesignature": "4",
+      "instrumental": true,
+      "mood": "Relaxed"
+    }
+  },
+  "moods": [
+    "Calm",
+    "Dark",
+    "Energetic",
+    "Epic",
+    "Melancholic",
+    "Nostalgic",
+    "Relaxed",
+    "Uplifting",
+    "Warm",
+    "Aggressive",
+    "Dreamy",
+    "Playful"
+  ],
+  "keys": [
+    "C Major", "C minor",
+    "C# Major", "C# minor",
+    "D Major", "D minor",
+    "Eb Major", "Eb minor",
+    "E Major", "E minor",
+    "F Major", "F minor",
+    "F# Major", "F# minor",
+    "G Major", "G minor",
+    "Ab Major", "Ab minor",
+    "A Major", "A minor",
+    "Bb Major", "Bb minor",
+    "B Major", "B minor"
+  ],
+  "time_signatures": {
+    "2/4": "2",
+    "3/4": "3",
+    "4/4": "4",
+    "6/8": "6"
+  }
+}

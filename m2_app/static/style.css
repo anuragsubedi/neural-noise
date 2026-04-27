@@ -1,0 +1,262 @@
+/*  =========================================================
+    neural-noise Milestone 2 — Custom Streamlit Theme
+    Dark glassmorphism aesthetic with vibrant accent colors
+    ========================================================= */
+
+/* Import premium font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ---- Root Variables ---- */
+:root {
+    --nn-bg-primary: #0a0a0f;
+    --nn-bg-secondary: #12121a;
+    --nn-bg-card: rgba(20, 20, 35, 0.7);
+    --nn-bg-glass: rgba(255, 255, 255, 0.03);
+    --nn-border: rgba(255, 255, 255, 0.06);
+    --nn-border-glow: rgba(124, 58, 237, 0.3);
+    --nn-text-primary: #e4e4e7;
+    --nn-text-secondary: #a1a1aa;
+    --nn-text-muted: #71717a;
+    --nn-accent-violet: #8b5cf6;
+    --nn-accent-purple: #a855f7;
+    --nn-accent-blue: #3b82f6;
+    --nn-accent-cyan: #06b6d4;
+    --nn-accent-emerald: #10b981;
+    --nn-gradient-primary: linear-gradient(135deg, #8b5cf6, #06b6d4);
+    --nn-gradient-warm: linear-gradient(135deg, #f59e0b, #ef4444);
+    --nn-shadow-glow: 0 0 30px rgba(139, 92, 246, 0.15);
+    --nn-radius: 12px;
+    --nn-radius-lg: 16px;
+    --nn-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---- Global Overrides ---- */
+.stApp {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--nn-bg-primary) !important;
+    color: var(--nn-text-primary);
+}
+
+/* ---- Sidebar ---- */
+section[data-testid="stSidebar"] {
+    background: var(--nn-bg-secondary) !important;
+    border-right: 1px solid var(--nn-border) !important;
+}
+
+section[data-testid="stSidebar"] .stMarkdown h1,
+section[data-testid="stSidebar"] .stMarkdown h2,
+section[data-testid="stSidebar"] .stMarkdown h3 {
+    color: var(--nn-accent-violet) !important;
+    font-weight: 600;
+}
+
+/* ---- Cards / Containers ---- */
+div[data-testid="stExpander"],
+div[data-testid="stForm"] {
+    background: var(--nn-bg-card) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--nn-border) !important;
+    border-radius: var(--nn-radius-lg) !important;
+    padding: 1rem;
+    transition: var(--nn-transition);
+}
+
+div[data-testid="stExpander"]:hover,
+div[data-testid="stForm"]:hover {
+    border-color: var(--nn-border-glow) !important;
+    box-shadow: var(--nn-shadow-glow);
+}
+
+/* ---- Headings ---- */
+.stMarkdown h1 {
+    background: var(--nn-gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.stMarkdown h2 {
+    color: var(--nn-text-primary) !important;
+    font-weight: 600;
+    border-bottom: 2px solid var(--nn-border);
+    padding-bottom: 0.5rem;
+}
+
+.stMarkdown h3 {
+    color: var(--nn-accent-violet) !important;
+    font-weight: 500;
+}
+
+/* ---- Buttons ---- */
+.stButton > button {
+    background: var(--nn-gradient-primary) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: var(--nn-radius) !important;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    padding: 0.6rem 1.5rem;
+    transition: var(--nn-transition);
+    text-transform: none;
+    letter-spacing: 0.01em;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.35);
+    filter: brightness(1.1);
+}
+
+.stButton > button:active {
+    transform: translateY(0);
+}
+
+/* Secondary buttons */
+.stButton > button[kind="secondary"] {
+    background: var(--nn-bg-glass) !important;
+    border: 1px solid var(--nn-border) !important;
+    color: var(--nn-text-primary) !important;
+}
+
+/* ---- Sliders ---- */
+div[data-testid="stSlider"] > div > div > div {
+    background: var(--nn-accent-violet) !important;
+}
+
+/* ---- Select Boxes / Dropdowns ---- */
+div[data-testid="stSelectbox"] > div > div {
+    background: var(--nn-bg-card) !important;
+    border: 1px solid var(--nn-border) !important;
+    border-radius: var(--nn-radius) !important;
+    color: var(--nn-text-primary) !important;
+}
+
+/* ---- Text Inputs / Text Areas ---- */
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea {
+    background: var(--nn-bg-card) !important;
+    border: 1px solid var(--nn-border) !important;
+    border-radius: var(--nn-radius) !important;
+    color: var(--nn-text-primary) !important;
+    font-family: 'Inter', sans-serif;
+}
+
+.stTextInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus {
+    border-color: var(--nn-accent-violet) !important;
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2) !important;
+}
+
+/* ---- Metrics ---- */
+div[data-testid="stMetric"] {
+    background: var(--nn-bg-card);
+    border: 1px solid var(--nn-border);
+    border-radius: var(--nn-radius);
+    padding: 1rem;
+}
+
+div[data-testid="stMetric"] label {
+    color: var(--nn-text-secondary) !important;
+    font-weight: 500;
+}
+
+div[data-testid="stMetric"] div[data-testid="stMetricValue"] {
+    color: var(--nn-accent-violet) !important;
+    font-weight: 700;
+}
+
+/* ---- Tabs ---- */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 0.5rem;
+    background: transparent;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background: var(--nn-bg-glass) !important;
+    border: 1px solid var(--nn-border) !important;
+    border-radius: var(--nn-radius) !important;
+    color: var(--nn-text-secondary) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: var(--nn-transition);
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    color: var(--nn-text-primary) !important;
+    border-color: var(--nn-accent-violet) !important;
+}
+
+.stTabs [aria-selected="true"] {
+    background: var(--nn-bg-card) !important;
+    color: var(--nn-accent-violet) !important;
+    border-color: var(--nn-accent-violet) !important;
+}
+
+/* ---- Audio Player ---- */
+audio {
+    width: 100%;
+    border-radius: var(--nn-radius);
+    outline: none;
+}
+
+/* ---- Code Blocks ---- */
+.stCodeBlock, pre, code {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
+    border-radius: var(--nn-radius) !important;
+}
+
+/* ---- Dividers ---- */
+hr {
+    border-color: var(--nn-border) !important;
+    opacity: 0.5;
+}
+
+/* ---- Progress Bar ---- */
+.stProgress > div > div > div {
+    background: var(--nn-gradient-primary) !important;
+    border-radius: var(--nn-radius);
+}
+
+/* ---- Spinner ---- */
+.stSpinner > div {
+    border-top-color: var(--nn-accent-violet) !important;
+}
+
+/* ---- Animations ---- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+.element-container {
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* ---- Status Indicators ---- */
+.status-online {
+    color: var(--nn-accent-emerald);
+    font-weight: 600;
+}
+
+.status-offline {
+    color: #ef4444;
+    font-weight: 600;
+}
+
+.status-generating {
+    animation: pulse 1.5s ease-in-out infinite;
+    color: var(--nn-accent-cyan);
+    font-weight: 600;
+}

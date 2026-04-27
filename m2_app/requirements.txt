@@ -1,0 +1,22 @@
+# neural-noise Milestone 2 — Streamlit Dashboard Dependencies
+# NOTE: Run inside the acestep_env venv which already has PyTorch + ACE-Step deps
+
+# Frontend
+streamlit>=1.38.0
+plotly>=5.18.0
+
+# Audio Processing & Visualization
+librosa>=0.10.0
+soundfile>=0.13.1
+numpy
+scipy
+
+# Backend Microservices
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+requests
+httpx
+
+# Utilities
+Pillow
+python-dotenv
