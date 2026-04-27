@@ -13,6 +13,9 @@ Run with:
 
 import streamlit as st
 from pathlib import Path
+import os
+
+_DEPLOY_MODE = os.environ.get("DEPLOY_MODE", "")
 
 # ---------------------------------------------------------------------------
 # Page Config (must be first Streamlit call)
@@ -41,10 +44,17 @@ with st.sidebar:
     st.markdown("*Controllable Music Generation*")
     st.markdown("---")
 
-    st.markdown("### Pipeline Status")
+    st.markdown("### Pipeline Status" if _DEPLOY_MODE != "cloud" else "### Demo Mode")
 
-    # Show engine status
-    if "engine_initialized" in st.session_state and st.session_state.engine_initialized:
+    if _DEPLOY_MODE == "cloud":
+        st.markdown(
+            '<span style="background:#7c3aed;color:white;padding:3px 10px;'
+            'border-radius:12px;font-size:0.8rem;">☁ Hosted Demo</span>',
+            unsafe_allow_html=True,
+        )
+        st.caption("Gallery, Metrics & Architecture pages are fully available. "
+                   "Generation requires a local GPU — see the README.")
+    elif "engine_initialized" in st.session_state and st.session_state.engine_initialized:
         mode = st.session_state.get("engine_mode", "local")
         st.markdown(f'<span class="status-online">● Engine Online</span> ({mode})',
                     unsafe_allow_html=True)
@@ -52,6 +62,7 @@ with st.sidebar:
         st.markdown('<span class="status-offline">● Engine Offline</span>',
                     unsafe_allow_html=True)
         st.caption("Navigate to the Generate page to initialize.")
+
 
     st.markdown("---")
 

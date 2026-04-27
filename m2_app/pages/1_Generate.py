@@ -52,6 +52,32 @@ if css_path.exists():
     with open(css_path) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
+# ---------------------------------------------------------------------------
+# Cloud deployment guard — must come BEFORE any backend / torch imports
+# ---------------------------------------------------------------------------
+if os.environ.get("DEPLOY_MODE") == "cloud":
+    st.markdown("# Generate Music")
+    st.markdown("---")
+    st.info(
+        "**Generation is unavailable in the hosted demo.**\n\n"
+        "The ACE-Step 1.5 inference pipeline requires a local GPU (Apple Silicon MPS "
+        "or NVIDIA CUDA) and ~12 GB of model checkpoints — resources that are not "
+        "available in the Streamlit Community Cloud environment.\n\n"
+        "To run the full pipeline locally, follow the "
+        "[README setup instructions](https://github.com/anuragsubedi/neural-noise"
+        "#quick-start-milestone-2-streamlit-dashboard)."
+    )
+    st.markdown("### Explore the demo instead:")
+    c1, c2 = st.columns(2)
+    with c1:
+        st.page_link("pages/2_Gallery.py", label="Browse the Gallery", icon="🎧")
+        st.page_link("pages/4_Metrics.py", label="View Evaluation Metrics", icon="📊")
+    with c2:
+        st.page_link("pages/3_Architecture.py", label="Explore Architecture", icon="🔬")
+        st.page_link("pages/5_MIDI_Baseline.py", label="M1 MIDI Baseline", icon="🎹")
+    st.stop()
+# ---------------------------------------------------------------------------
+
 
 # ---------------------------------------------------------------------------
 # Initialize Preset Manager

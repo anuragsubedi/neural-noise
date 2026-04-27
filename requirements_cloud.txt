@@ -1,0 +1,13 @@
+# neural-noise — Streamlit Community Cloud requirements
+# Lightweight subset: Gallery + Architecture + Metrics (static) + MIDI Baseline.
+# The Generate page is disabled when DEPLOY_MODE=cloud (no GPU / no checkpoints).
+
+streamlit>=1.38.0
+plotly>=5.18.0
+numpy
+scipy
+soundfile>=0.13.1
+librosa>=0.10.0
+Pillow
+python-dotenv
+requests
